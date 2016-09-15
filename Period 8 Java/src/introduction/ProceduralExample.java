@@ -2,8 +2,8 @@ package introduction;
 
 public class ProceduralExample {
   public static void main(String[] args){
-    System.out.println("Hello World! I am coding in JAVA for the first time! YAY!");
-    System.out.println("I am coding in JAVA.");
-
+	  String[] names = {"Jillian","Joseph","Jordan"};
+	  System.out.println("Hi, my name is "+names[0]+".");
   }
+  
 }
