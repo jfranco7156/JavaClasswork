@@ -5,7 +5,7 @@ public class OOPExample {
 	public static void main(String[] args) {
 		//Use 'new' to refer to a constructor
 		Student jillian = new Senior("Jillian");
-		Student josh = new Student("Josh");
+		Student josh = new Sophomore("Josh","Polar Bear");
 		Student jordan = new Student("Jordan");
 		
 		jillian.talk();

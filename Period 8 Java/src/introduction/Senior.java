@@ -8,7 +8,9 @@ public class Senior extends Student {
 	}
 	
 	public void talk(){
-		System.out.println("I am a senior!");
+		//the talk from the superclass will be done first, followed by a new talk
+		super.talk();
+		System.out.println(" and I am a senior!");
 	}
 
 }
