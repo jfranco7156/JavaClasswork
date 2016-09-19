@@ -9,9 +9,9 @@ public class Junior extends Student {
 		this.examType = exam;
 	}
 	
-	public void talkExamType(){
+	public void talk(){
 		super.talk();
-		System.out.println(" I will be taking the "+examType);
+		System.out.println("I am a Junior and I will be taking the "+examType+" this year");
 	}
 
 }
