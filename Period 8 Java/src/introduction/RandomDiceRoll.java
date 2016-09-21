@@ -4,17 +4,17 @@ public class RandomDiceRoll {
 
 	public static void main(String[] args) {
 		int[] results = new int[6];
+		int totalRolls = 10000;
 		
 		//declare variable; logic test; increment
 		for(int index=0; index<10; index++){
-			int result= rollFairDice();
-			System.out.println("Roll # "+(index+1)+": "+rollFairDice()+"  Unfair: "+rollUnfairDice() +"  Result: "+result);
-			results[result-1]++;
+			System.out.println("Roll # "+(index+1)+": "+rollFairDice()/*+"  Unfair: "+rollUnfairDice()*/);
 		}
 		
 		//print results
 		for (int i=0; i<6; i++){
-			System.out.println((i+1)+"appeared" + results[i]+" times.");
+			double percentage = ((int) (1000*(double)results[i]/totalRolls))/10.0;
+			System.out.println((i+1)+" appeared " + percentage +"% times.");
 		}
 	}
 	
@@ -26,6 +26,8 @@ public class RandomDiceRoll {
 		return roll;
 	}
 	
+	
+	/*
 	public static int rollUnfairDice()
 	{
 		//Make some numbers appear more than others.
@@ -36,5 +38,6 @@ public class RandomDiceRoll {
 		roll3++;
 		return roll3;
 	}
+	*/
 
 }
