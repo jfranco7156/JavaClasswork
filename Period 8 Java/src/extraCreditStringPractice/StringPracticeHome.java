@@ -2,7 +2,7 @@ package extraCreditStringPractice;
 
 import java.util.Scanner;
 
-public class StringPractice {
+public class StringPracticeHome {
 
 	static Scanner input;
 	static String user;
