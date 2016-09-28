@@ -38,13 +38,14 @@ public class JenniberMain {
 				print("That's wonderful. So glad you feel good.");
 			}
 			//response to liking school
-			else if(response.indexOf("school")>=0){
-				print("School is great! Tell me about school.");
-				//exit this while loop
-				inMainLoop = false;
-				//go to school's talk method
-				school.talk();
-			}
+//			else if(response.indexOf("school")>=0){
+//				print("School is great! Tell me about school.");
+//				//exit this while loop
+//				inMainLoop = false;
+//				//go to school's talk method
+//				school.talk();
+//			}
+			
 			else{
 				print("I don't understand.");
 			}
