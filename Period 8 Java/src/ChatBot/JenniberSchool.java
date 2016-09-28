@@ -20,5 +20,21 @@ public class JenniberSchool implements ChatBot{
 			JenniberMain.print("That's my favorite part about school");
 		}
 	}
+
+	@Override
+	public boolean isTriggered(String userInput) {
+		//String[] triggers = {"school", "class", "teacher"};
+		//create for loop to iterate through your array
+		
+		if(JenniberMain.findKeyword(userInput, "school", 0)>=0){
+			return true;
+		}
+		if(JenniberMain.findKeyword(userInput, "class", 0)>=0){
+			return true;
+		}
+		
+		
+		return false;
+	}
 	
 }
