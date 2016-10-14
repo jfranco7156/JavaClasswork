@@ -39,15 +39,25 @@ public class ArraysPractice {
 		}
 		
 		//OBJECT ARRAYS
-		String[] someStrings1 = new String[3];
 		String[] someStrings2 = {"a","b","c"};
+		String[] someStrings1 = new String[3];
+		//you can do this to instantiate
+//		someStrings1[0] = "a";
+//		someStrings1[1] = "b";
+//		someStrings1[2] = "c";
+		//...but it is repetitive
+		
+		//Let's try a loop to instantiate:
+		for(int i=0;i<someStrings1.length; i++){
+			someStrings1[i] = "a new String";
+		}
 		
 		for(String s: someStrings1){
 			System.out.println(s);
 		}
-		for(String s: someStrings2){
-			System.out.println(s);
-		}
+//		for(String s: someStrings2){
+//			System.out.println(s);
+//		}
 		
 	}
 
