@@ -8,6 +8,44 @@ public class ArraysPractice {
 	static boolean[] boos3;
 	public static void main(String[] args) {
 		
+		//how do you time a process?
+		//time is measured in 'long' because it is in milliseconds
+		long currentTime = System.currentTimeMillis();
+		
+		//initializingArrayExample();
+		String[] someStrings = new String[1000];
+		standardPopulate(someStrings);
+		String s = someStrings[999];
+		makeSpecial(s);
+		print(someStrings);
+		
+		long endTime = System.currentTimeMillis();
+		System.out.println("The process took "+(endTime-currentTime)+" ms.");
+		
+	}
+	
+	private static void makeSpecial(String s) {
+		s = "THIS STRING IS SPECIAL!";
+	}
+
+	public static void print(String[] s){
+		for(int i=0; i<s.length;i++){
+			System.out.println(s[i]);
+		}
+	}
+	
+	private static void standardPopulate(String[] s) {
+//		for(int i=0; i<s.length;i++){
+//			s[i] = "String #"+(i+1);
+//		}
+		int i = 0;
+		for(String x: s){
+			i++;
+			x = "String #"+i;
+		}
+	}
+
+	public static void initializingArrayExample(){
 		//Two different ways to instantiate an array
 		boolean[] boos1 = new boolean[3];
 		//this can ONLY be done at the declaration b/c it sets size AND content
@@ -16,7 +54,7 @@ public class ArraysPractice {
 		//boos3 = {false,true,true};
 		//this is all that will work
 		boos3 = new boolean[3];
-		
+			
 		/**2 ways of iterating through an array:
 		 * 	STANDARD FOR LOOP
 		 * 		- the index is important to keep track of
@@ -55,10 +93,6 @@ public class ArraysPractice {
 		for(String s: someStrings1){
 			System.out.println(s);
 		}
-//		for(String s: someStrings2){
-//			System.out.println(s);
-//		}
-		
 	}
 
 }
