@@ -3,6 +3,8 @@ package arrays;
 //Side Note: if you want to put different primitive types into an array,
 //			you must use the wrapper class
 
+
+//pass-by-value changes the local variable but does not change the parameter variable itself
 public class ArraysPractice {
 
 	static boolean[] boos3;
@@ -12,16 +14,66 @@ public class ArraysPractice {
 		//time is measured in 'long' because it is in milliseconds
 		long currentTime = System.currentTimeMillis();
 		
+		int[] fiftyNumbers = new int[50];
+		populate(fiftyNumbers);
+		print(fiftyNumbers);
+		randomize(fiftyNumbers,100);
+		print(fiftyNumbers);
+		rollDice(fiftyNumbers);
+		print(fiftyNumbers);
+		//count each die roll and provide a percentage
+		countResults(fiftyNumbers);
+		
+		long endTime = System.currentTimeMillis();
+		System.out.println("The process took "+(endTime-currentTime)+" ms.");
+		
+	}
+	
+	private static void countResults(int[] nums) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void rollDice(int[] nums) {
+		for(int i=0; i<nums.length;i++){
+			double randNum1 = Math.random();
+			int rand1 = (int)(randNum1*6);
+			double randNum2 = Math.random();
+			int rand2 = (int)(randNum2*6);
+			int rand  = rand1+rand2+2;
+			nums[i] = rand;
+		}
+	}
+
+	private static void randomize(int[] nums, int maxNum) {
+		for(int i=0; i<nums.length;i++){
+			double randNum = Math.random();
+			int rand = (int)(randNum*maxNum);
+			rand++;
+			nums[i] = rand;
+		}
+	}
+
+	public static void print(int[] nums) {
+		for(int i=0; i<nums.length; i++){
+			System.out.println("fiftyNumbers["+i+"] = "+nums[i]);
+		}
+		
+	}
+
+	private static void populate(int[] nums) {
+		for(int i=0; i<nums.length;i++){
+			nums[i] = i+1;
+		}
+	}
+
+	public static void demonstratePassByValue(){
 		//initializingArrayExample();
 		String[] someStrings = new String[1000];
 		standardPopulate(someStrings);
 		String s = someStrings[999];
 		makeSpecial(s);
 		print(someStrings);
-		
-		long endTime = System.currentTimeMillis();
-		System.out.println("The process took "+(endTime-currentTime)+" ms.");
-		
 	}
 	
 	private static void makeSpecial(String s) {
