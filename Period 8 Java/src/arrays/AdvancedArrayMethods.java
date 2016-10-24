@@ -20,8 +20,6 @@ public class AdvancedArrayMethods {
 		
 	}
 
-
-
 	private static void swap(Object[] arr, int a, int b) {
 		Object placeholder = arr[b];
 		arr[b] = arr[a];
