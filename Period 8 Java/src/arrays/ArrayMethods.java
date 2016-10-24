@@ -2,6 +2,9 @@ package arrays;
 
 public class ArrayMethods {
 
+
+public class ArrayMethods {
+
     public static void main(String[] args) {
     
      /**
@@ -12,10 +15,17 @@ public class ArrayMethods {
       * DO NOT spend hours and hours trying to fix perfect code just because my test
       * says that it isn't perfect!
       * */
-      //int[] numberSorted = [9,8,7,6,5,4,3];
-      //int[] numberUnsorted = [5,2,3,6,8,1];
+      //int[] numberSorted = {9,8,7,6,5,4,3};
+      //int[] numberUnsorted = {5,2,3,6,8,1};
+    //   int[] arr1 = {9,6,1,4,3,6,7,9};
+    //   double[] arr2 = {9,6,5,8,3,6,7,0};
+    //   double[] arr3 = orderArray(arr2);
       
+    //   for(int i=0;i<arr3.length;i++){
+    //       System.out.println(arr3[i]);
+    //   }
       
+      //System.out.println(numberSorted.length/2);
       
     }
     
@@ -43,28 +53,25 @@ public class ArrayMethods {
      * 
      * Note: You should attempt to write a method that is more efficient that searchUnsorted
      * */
-     int arrLength = sortedArrayToSearch.length;
-     int start = 0;
-     int middle = arrLength/2;
-     int end = arrLength-1;
-     
-     while(start!=middle || end!=middle){
-         if(sortedArrayToSearch[middle]==key){
-             return middle;
-        }
-        else if(sortedArrayToSearch[middle]>key){
-            arrLength = end-middle;
-            start = middle;
-            middle = arrLength/2+start;
-        }
-        else{
-            arrLength = middle;
-            end = middle;
-            middle = arrLength/2;
-        }
-     }
+     int length = sortedArrayToSearch.length;
 
-     return -1;
+        if(key<=sortedArrayToSearch[length/2]){
+            for(int i=sortedArrayToSearch[length/2]-1; i<length/2; i++){
+                if(key==sortedArrayToSearch[i]){
+                    return i;
+                }
+            }
+        }else{
+            if(key>sortedArrayToSearch[length/2]){
+                for(int i=0; i<length/2; i++){
+                    if(key==sortedArrayToSearch[i]){
+                        return i;
+                    }
+                }
+            }
+        }
+        
+        return -1;
     }
     
     public static boolean isSorted(int[] array){
@@ -95,29 +102,64 @@ public class ArrayMethods {
          * index 5 = the number of values below the mean
          * */
         double[] stats = new double[6];
-         double sum = 0;
-         double max = 0;
-         double min = 0;
+         double[] orderArr = orderArray(array);
+         double mean = 0;
+         double max = orderArr[orderArr.length-1];
+         double min = orderArr[0];
          
          for(int x=0; x<array.length; x++){
-             sum = sum+array[x];
-             if(max<array[x]){
-                 max = array[x];
+             mean = mean+array[x];
+         }
+         mean = mean/array.length;
+         
+         double median = 0;
+         
+         if(orderArr.length%2==0){
+             double med1 = orderArr[orderArr.length/2];
+             double med2 = orderArr[orderArr.length/2+1];
+             median = med1+med2/2;
+         }
+         else{
+             median = orderArr[orderArr.length/2+1];
+         }
+         
+         double greaterMean = 0;
+         double lessMean = 0;
+         
+         for(int j=0; j<orderArr.length; j++){
+             if(orderArr[j]>=mean){
+                 greaterMean++;
              }
-             if(min>array[x]){
-                 min = array[x];
+             else{
+                 lessMean++;
              }
          }
-         stats[0] = sum/array.length;
-         stats[1] = array[array.length];
-         stats[2] = array[0];
-         stats[3] = 0;
-         stats[4] = 0;
-         stats[5] = 0;
+         
+         stats[0] = mean;
+         stats[1] = max;
+         stats[2] = min;
+         stats[3] = median;
+         stats[4] = greaterMean;
+         stats[5] = lessMean;
          
          return stats;
     }
     
+    private static double[] orderArray(double[] arr){
+		
+	    for (int i = 0; i < arr.length - 1; i++)
+	    {
+	        int index = i;
+	        for (int j = i + 1; j < arr.length; j++)
+	            if (arr[j] < arr[index]) 
+	                index = j;
+	 
+	        double smallerNumber = arr[index];  
+	        arr[index] = arr[i];
+	        arr[i] = smallerNumber;
+	    }
+	    return arr;
+	}
     
     public static void reverseOrder(int[] array){
         /**
@@ -139,7 +181,6 @@ public class ArrayMethods {
              reverseArray[i] = array[oldIdx];
              oldIdx--;
          }
-         
          for(int i=0; i<array.length; i++){
              array[i] = reverseArray[i];
          }
@@ -180,8 +221,21 @@ public class ArrayMethods {
          * longestSequence({0,9,10,11,4,3,8,9}) returns '3', since '9,10,11' is 3 integers long
          * longestSequence({0,9,8,11,4,3,7,9}) returns '1', since there are no consecutive integers
          * */
+        int longestSeq = 1;
+        int inOrder = 1;
+        for(int i=1;i<array1.length;i++){
+            if(array1[i-1]+1==array1[i]){
+                inOrder++;
+            }
+            else{
+                if(inOrder>longestSeq){
+                    longestSeq = inOrder;
+                }
+                inOrder=1;
+            }
+        }
         
-        return 0;
+        return longestSeq;
     }
 
     public static int longestSharedSequence(int[] array1, int[] array2){
@@ -195,8 +249,55 @@ public class ArrayMethods {
          *          since the sequence '9,6,3,4,3' is in both arrays and is 5 integers long, it doesn't matter that the sequence begins at different indices 
          * longestSequence({9,6,1,4,3,6,7,9}, {9,6,5,8,3,6,7,0}) returns '3', since the sequence '3,6,7' is in both arrays and is 3 integers long
          * */
+        //  int longestSharedSeq = 0;
+        //  int sharedSeq = 0;
+         
+        //  for(int i=0; i<array1.length;i++){
+        //      int x = 0;
+        //      boolean inLoop = true;
+        //      while(inLoop){
+        //          int j = 0;
+        //          if(array1[i+j]==array2[x+j]){
+        //              sharedSeq++;
+        //              j++;
+        //              if(sharedSeq>longestSharedSeq){
+        //                  longestSharedSeq = sharedSeq;
+        //              }
+        //          }
+        //          if(x+j==array2.length || i+j==array1.length){
+        //              inLoop=false;
+        //          }
+        //      }
+        //  }
         
-        return 0;
+        // return sharedSeq;
+        int max = 0;
+        int count = 0;
+        
+        for(int seqStart=0; seqStart<array1.length; seqStart++){
+            int seqEnd = seqStart;
+            int[] seq = getSequence(seqStart, seqEnd, array1);
+            if(checkSequence(seq, array2)){
+            	count++;
+            	if(count>max){
+            		max=count;
+            	}
+            }
+            //reset the count to 0 after every seq has been checked
+            count = 0;
+        }
+        
+        return max;
+    }
+    
+    //returns true if seq is found inside array2;
+    private static boolean checkSequence(int[] seq, int[] arr){
+    	return false;
+    }
+    
+    //returns a sub-array containing the elements in array1 from seqStart to seqEnd
+    private static int[] getSequence(int seqStarts, int seqEnd, int[] arr){
+        return null;
     }
 
     public static int[] generateDistinctItemsList(int n){
@@ -207,9 +308,16 @@ public class ArrayMethods {
          * contains only entries between 1 and 2n (inclusive) and has no duplicates
          * 
          * */
+        //  int[] arr = new int[n];
+        //  for(int i=0; i<arr.length;i++){
+        //      int rand = (int)(Math.random()*2*n+1);
+        //      arr[i]= rand;
+        //  }
+        
+        
+         
         return null; 
     }
-    
     
     public static void cycleThrough(int[] array, int n){
         /** This problem represents people moving through a line.
@@ -233,8 +341,34 @@ public class ArrayMethods {
          * 
          * CHALLENGE
          * For extra credit, make your method handle NEGATIVE n
-         * */
+         * */ 
+         
+         boolean inLoop = true;
+         
+         while(inLoop){
+             cycleOnce(array);
+             n--;
+             if(n==0){
+                 inLoop = false;
+             }
+         }
+         
     }
+    
+    private static void cycleOnce(int[] arr){
+        for(int i=arr.length-1; i>=0; i--){
+            swap(arr, 0, i);
+        }
+    }
+    
+    private static void swap(int[] arr, int a, int b) {
+		int placeholder = arr[b];
+		arr[b] = arr[a];
+		arr[a] = placeholder;
+	}
+
+}
+
     
 
 }
