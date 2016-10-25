@@ -2,9 +2,6 @@ package arrays;
 
 public class ArrayMethods {
 
-
-public class ArrayMethods {
-
     public static void main(String[] args) {
     
      /**
@@ -369,6 +366,3 @@ public class ArrayMethods {
 
 }
 
-    
-
-}
