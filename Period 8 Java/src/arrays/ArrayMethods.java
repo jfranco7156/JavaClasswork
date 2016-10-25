@@ -272,7 +272,8 @@ public class ArrayMethods {
         int count = 0;
         
         for(int seqStart=0; seqStart<array1.length; seqStart++){
-            int seqEnd = seqStart;
+            //insert a loop here
+        	int seqEnd = seqStart;
             int[] seq = getSequence(seqStart, seqEnd, array1);
             if(checkSequence(seq, array2)){
             	count++;
@@ -289,6 +290,20 @@ public class ArrayMethods {
     
     //returns true if seq is found inside array2;
     private static boolean checkSequence(int[] seq, int[] arr){
+    	// i checks every value in arr
+    	A: for(int i=0; i<arr.length; i++){
+    		//j checks every element in seq
+    		B: for(int j=0; j<seq.length; j++){
+        		if(j+i<arr.length && seq[j]!=arr[j+i]){
+        			//break out of inner-most 'for loop' unless particular 'for loop' is specified
+        			//(labels "A:")
+        			break B;
+        		}
+        		else if(j == seq.length-1){
+        			return true;
+        		}
+        	}
+    	}
     	return false;
     }
     
