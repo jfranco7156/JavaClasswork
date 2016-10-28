@@ -9,25 +9,24 @@ public class ArraysPractice {
 
 	static boolean[] boos3;
 	public static void main(String[] args) {
-		int i = 50;
-		listPrimes(i);
+		listPrimes(120);
 		
-		//how do you time a process?
-		//time is measured in 'long' because it is in milliseconds
-		long currentTime = System.currentTimeMillis();
-		
-		int[] fiftyNumbers = new int[50];
-		populate(fiftyNumbers);
-		print(fiftyNumbers);
-		randomize(fiftyNumbers,100);
-		print(fiftyNumbers);
-		rollDice(fiftyNumbers,3);
-		print(fiftyNumbers);
-		//count each die roll and provide a percentage
-		countResults(fiftyNumbers,3);
-		
-		long endTime = System.currentTimeMillis();
-		System.out.println("The process took "+(endTime-currentTime)+" ms.");
+//		//how do you time a process?
+//		//time is measured in 'long' because it is in milliseconds
+//		long currentTime = System.currentTimeMillis();
+//		
+//		int[] fiftyNumbers = new int[50];
+//		populate(fiftyNumbers);
+//		print(fiftyNumbers);
+//		randomize(fiftyNumbers,100);
+//		print(fiftyNumbers);
+//		rollDice(fiftyNumbers,3);
+//		print(fiftyNumbers);
+//		//count each die roll and provide a percentage
+//		countResults(fiftyNumbers,3);
+//		
+//		long endTime = System.currentTimeMillis();
+//		System.out.println("The process took "+(endTime-currentTime)+" ms.");
 		
 	}
 	
@@ -40,7 +39,20 @@ public class ArraysPractice {
 		numbers[0]=false;
 		numbers[1]=false;
 		for(int prime=2; prime<=lastToCheck; prime++){
-			
+			if(numbers[prime]){
+				System.out.println("\n"+prime+" is prime. Crossing off: ");
+				for(int i= (int)(Math.pow(prime, 2)); i<limit+1; i+=prime){
+					System.out.print(i+", ");
+					numbers[i] = false;
+				}
+			}
+		}
+		//print the primes
+		System.out.println("\nThe primes are: ");
+		for(int index=0; index<numbers.length; index++){
+			if(numbers[index]){
+				System.out.print(index+", ");
+			}
 		}
 	}
 
