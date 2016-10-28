@@ -9,6 +9,8 @@ public class ArraysPractice {
 
 	static boolean[] boos3;
 	public static void main(String[] args) {
+		int i = 50;
+		listPrimes(i);
 		
 		//how do you time a process?
 		//time is measured in 'long' because it is in milliseconds
@@ -29,6 +31,19 @@ public class ArraysPractice {
 		
 	}
 	
+	private static void listPrimes(int limit) {
+		int lastToCheck=(int)(Math.sqrt(limit));
+		boolean[] numbers = new boolean[limit+1];
+		for(int i=0; i<limit+1; i++){
+			numbers[i] = true;
+		}
+		numbers[0]=false;
+		numbers[1]=false;
+		for(int prime=2; prime<=lastToCheck; prime++){
+			
+		}
+	}
+
 	private static void countResults(int[] nums, int numOfDice) {
 		int[] counter = new int[6*numOfDice];
 		for(int n: nums){
