@@ -10,10 +10,11 @@ public class TwoDArrays {
 		//a 1D array prints a horizontal string
 		
 		String[][] arr2D = new String[5][4];
+		System.out.println("The height is "+ arr2D.length);
+		System.out.println("The width is "+arr2D[0].length);
+		
 		for(int row=0; row<arr2D.length; row++){
 			//put an entire array into each row
-			String[] rowContent = new String[arr2D[0].length];
-			System.out
 			//populate with coordinates
 			for(int col=0; col<arr2D[row].length; col++){
 				arr2D[row][col] = "("+row+", "+col+")";
