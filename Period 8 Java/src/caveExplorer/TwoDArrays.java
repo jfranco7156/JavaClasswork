@@ -28,3 +28,12 @@ public class TwoDArrays {
 		}
 	}
 }
+
+//Make class call door to check whether door is locked or unlocked.
+// if puzzle is solved, door become unlocked
+//Make an [] with bordering rooms that contain the rooms surrounding the cells you are at
+// if bordering room does not exist, store that value as null
+//Make an [] of doors to check whether they are opened or not
+//Make an inventory to store treasure, content, bonuses, etc
+//Group of six will program how the rooms are connected
+// order in which the rooms are connected
