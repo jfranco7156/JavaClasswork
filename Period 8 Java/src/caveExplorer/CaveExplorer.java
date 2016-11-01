@@ -7,7 +7,7 @@ public class CaveExplorer {
 	public static CaveRoomPd8[][] caves;
 	public static Scanner in;
 	public static CaveRoomPd8 currentRoom;
-	public static InventoryKnockles inventory;
+	public static InventoryNockles inventory;
 	
 	public static void main(String[] args) {
 		in = new Scanner(System.in);
@@ -19,9 +19,30 @@ public class CaveExplorer {
 		}
 		currentRoom = caves[1][2];
 		currentRoom.enter();
-		caves[1][2].setConnection(caves[1][1]);
-		caves[1][2].setConnection(caves[2][2]);
-		caves[1][2].setConnection(caves[1][3]);
+		caves[1][2].setConnection(CaveRoomPd8.WEST,caves[1][1], new Door());
+		caves[1][2].setConnection(CaveRoomPd8.SOUTH,caves[2][2], new Door());
+		caves[1][2].setConnection(CaveRoomPd8.EAST,caves[1][3], new Door());
+		
+		startExploring();
+	}
+
+	private static void startExploring() {
+		while(true){
+			print(currentRoom.getDescription());
+			print("What would you like to do?");
+			String input = in.nextLine();
+			inventory = new InventoryNockles(caves);
+			act(input);
+		}
+	}
+	
+	private static void act(String input) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void print(String text){
+		System.out.println(text);
 	}
 
 }
