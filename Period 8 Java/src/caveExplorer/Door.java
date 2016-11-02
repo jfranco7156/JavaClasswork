@@ -9,7 +9,45 @@ public class Door {
 	public Door(){
 		open=true;
 		locked=false;
-		description="Closed";
-		details= "";
+		description="door";
+		details=" ";
 	}
+//getters and setters
+	public boolean isOpen() {
+		return open;
+	}
+
+	public void setOpen(boolean open) {
+		this.open = open;
+	}
+
+	public boolean isLocked() {
+		return locked;
+	}
+
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDetails() {
+		return details;
+	}
+
+	public void setDetails(String details) {
+		this.details = details;
+	}
+	public String toDirection(int dir) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 }
