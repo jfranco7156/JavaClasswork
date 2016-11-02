@@ -36,7 +36,7 @@ public class TwoDArrays {
 	private static String countNearby(boolean[][] mines, int row, int col) {
 		for(int r=row-1; r<row+1; r++){
 			for(int c=col-1; c<=col+1;c++){
-				//chekc that this element exists within the array
+				//check that this element exists within the array
 				if(r>=0 && r<mines.length && c>=0 && c<mines[0].length){
 					
 				}
