@@ -109,7 +109,7 @@ public class TwoDArrays {
 				else if(c%4==0){
 					grid[r][c] = "|";
 				}
-				else if(row%3==0){
+				else if(r%3==0){
 					grid[r][c] = "_";
 				}
 				else{
