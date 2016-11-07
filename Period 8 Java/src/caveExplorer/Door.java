@@ -44,9 +44,9 @@ public class Door {
 	public void setDetails(String details) {
 		this.details = details;
 	}
-	public String toDirection(int dir) {
-		// TODO Auto-generated method stub
-		return null;
+	public static String toDirection(int dir){
+		String[] strings = {"the North", "the East","the South","the West"};
+		return strings[dir];
 	}
 	
 	
