@@ -7,11 +7,16 @@ public class InventoryNockles {
 	
 	
 	public InventoryNockles(CaveRoomPd8[][] caves) {
-		hasMap=true;
+		hasMap=false;
 		updateMap();
 		
 	}
-	private void updateMap() {
+	
+	public void setHasMap(boolean hasMap) {
+		this.hasMap = hasMap;
+	}
+	
+	public void updateMap() {
 		CaveRoomPd8[][] caves = CaveExplorer.caves;
 		//create the top
 		map=" ";
