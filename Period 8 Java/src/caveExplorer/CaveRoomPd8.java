@@ -104,7 +104,6 @@ public class CaveRoomPd8 {
 	}
 
 	public void interpretAction(String input) {
-		// TODO Auto-generated method stub
 		while(!isValid(input.toLowerCase())){
 			CaveExplorer.print("Please enter w, a, s , or d");
 			input = CaveExplorer.in.nextLine().toLowerCase();
