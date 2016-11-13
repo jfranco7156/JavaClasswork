@@ -296,5 +296,22 @@ public class TwoDArrays {
 			System.out.println(Arrays.toString(row));
 		}
 	}
+	
+	public static int rowNum(int blockNum, int rowLength){
+		int row=blockNum/rowLength;
+		if(blockNum%rowLength==0){
+			row--;
+		}
+		return row;
+	}
+	public static int colNum(int blockNum, int colLength){
+		int col=blockNum%colLength;
+		if(col==0){
+			col=colLength;
+		}
+		col--;
+		return col;
+	}
+	
 
 }
