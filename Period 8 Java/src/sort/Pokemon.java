@@ -19,11 +19,11 @@ public class Pokemon {
 		System.out.println(name+", "+name);
 	}
 	
-	public void setValues(String name,int level){
-		setName(name);
-		setLevel(level);
-		setHp(100);
-		setPoisoned(false);
+	public Pokemon(String name,int level){
+		hp=100;
+		this.name=name;
+		this.level=level;
+		this.poisoned=false;
 	}
 	
 	public void lapse(){
