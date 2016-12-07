@@ -23,7 +23,7 @@ public class Screen {
 	public void update() {
 		//this is where you draw stuff
 		Graphics2D g = image.createGraphics();
-		g.drawString(iterator, x, y);
+		g.drawString("Hello", 0, 0);
 	}
 	
 	public BufferedImage getImage(){
