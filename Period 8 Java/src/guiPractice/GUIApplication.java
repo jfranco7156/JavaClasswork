@@ -17,6 +17,8 @@ public class GUIApplication extends JFrame{
 	public GUIApplication(){
 		//terminate program when windows is closed
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//gets rid off the automatic border
+		//setUndecorated(true);
 		int x = 40;
 		int y = 40;
 		int width = 600;
