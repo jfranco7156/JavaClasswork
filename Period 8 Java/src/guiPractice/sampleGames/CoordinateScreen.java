@@ -15,11 +15,11 @@ public class CoordinateScreen extends Screen {
 	public CoordinateScreen(int width, int height) {
 		super(width, height);
 	}
-
+	
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
 		label = new TextLabel(40,45,760,40,"Sample Text");
-		paragraph = new TextArea(40,85,760,500,
+		paragraph = new TextArea(40,85,550,500,
 				"This is a whole paragraph. Notice how "
 				+ "as the paragraph gets to the edge"
 				+ " of the page, a new line is created.");
