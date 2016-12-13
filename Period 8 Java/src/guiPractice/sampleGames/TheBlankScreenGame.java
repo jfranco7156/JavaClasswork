@@ -1,9 +1,11 @@
 package guiPractice.sampleGames;
 
+
 import guiPractice.GUIApplication;
 import guiPractice.Screen;
 
 public class TheBlankScreenGame extends GUIApplication {
+
 
 	@Override
 	protected void initScreen() {
