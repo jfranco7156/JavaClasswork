@@ -1,5 +1,5 @@
 package guiPractice.components;
 
 public interface Action {
-	public void add();
+	public void act();
 }

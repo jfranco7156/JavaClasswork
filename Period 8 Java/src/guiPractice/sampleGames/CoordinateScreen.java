@@ -29,10 +29,15 @@ public class CoordinateScreen extends Screen implements MouseMotionListener{
 				"This is a whole paragraph. Notice how "
 				+ "as the paragraph gets to the edge"
 				+ " of the page, a new line is created.");
-		//viewObjects.add(label);
-		//viewObjects.add(paragraph);
-		button = new Button(40,45,760,40,"Button", Color.blue, act());
+		viewObjects.add(label);
+		viewObjects.add(paragraph);
+		button = new Button(40,200,80,40,"Button",new Color(100,100,250), new Action(){
+			public void act(){
+				
+			}
+		});
 		
+		viewObjects.add(button);
 		
 	}
 
