@@ -5,6 +5,9 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 
 public class Button extends TextLabel implements Clickable{
 
@@ -51,13 +54,16 @@ public class Button extends TextLabel implements Clickable{
 	}
 	
 	public boolean isHovered(int x, int y){
-		
 		return x>getX() && x<getX()+getWidth() && y>getY() && y<getY()+getHeight();
 	}
 
 	@Override
 	public void act() {
 		action.act();
+	}
+	
+	public Button getMouseListener(){
+		return this;
 	}
 	
 }
