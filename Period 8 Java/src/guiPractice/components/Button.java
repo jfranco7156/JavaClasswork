@@ -62,8 +62,4 @@ public class Button extends TextLabel implements Clickable{
 		action.act();
 	}
 	
-	public Button getMouseListener(){
-		return this;
-	}
-	
 }

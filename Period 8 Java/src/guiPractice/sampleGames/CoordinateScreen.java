@@ -34,7 +34,7 @@ public class CoordinateScreen extends Screen implements MouseMotionListener, Mou
 				+ " of the page, a new line is created.");
 		button = new Button(40,200,80,40,"Button",new Color(100,100,250), new Action(){
 			public void act(){
-				
+				MouseFollower.game.setScreen(MouseFollower.moveScreen);
 			}
 		});
 		picture = new Graphic(50,50,.35,"resources/sampleImages/pikachuFam.jpg");
@@ -61,10 +61,16 @@ public class CoordinateScreen extends Screen implements MouseMotionListener, Mou
 	public MouseMotionListener getMouseMotionListener(){
 		return this;
 	}
+	
+	public MouseListener getMouseListener(){
+		return this;
+	}
 
 	@Override
 	public void mouseClicked(MouseEvent m) {
-		// TODO Auto-generated method stub
+		if(button.isHovered(m.getX(), m.getY())){
+			button.act();
+		}
 		
 	}
 
