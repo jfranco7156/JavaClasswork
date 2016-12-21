@@ -6,41 +6,57 @@ import java.util.ArrayList;
 
 import guiPractice.Screen;
 import guiPractice.components.Action;
+import guiPractice.components.Clickable;
 import guiPractice.components.ClickableGraphic;
 import guiPractice.components.Graphic;
 import guiPractice.components.Visible;
 
-public class ClickableScreen extends Screen implements MouseListener {
+public abstract class ClickableScreen extends Screen implements MouseListener {
 
-	private ClickableGraphic doge;
+	private ClickableGraphic pika;
+	protected ArrayList<Clickable> clickables;
 	
 	public ClickableScreen(int width, int height) {
 		super(width, height);
-		// TODO Auto-generated constructor stub
+		
 	}
 
+	abstract void initAllObjects(ArrayList<Visible> viewObjects);
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if(doge.isHovered(e.getX(), e.getY())){
-			doge.act();
-		}
+//		if(pika.isHovered(e.getX(), e.getY())){
+//			pika.act();
+//		}
 		
+		for(Clickable c: clickables){
+			if(c.isHovered(e.getX(), e.getY())){
+				c.act();
+				break;
+			}
+		}
 	}
 
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
-		doge = new ClickableGraphic(50,50,1.3,"resources/sampleImages/doge.jpg");
-		doge.setAction(new Action(){
+		initAllObjects(viewObjects);
+		pika = new ClickableGraphic(50,50,1.3,"resources/sampleImages/cutePika.png");
+		pika.setAction(new Action(){
 
 			@Override
 			public void act() {
-				doge.setX(doge.getX() + 10);
-				doge.setY(doge.getY() + 10);
+				pika.setX(pika.getX() + 10);
+				pika.setY(pika.getY() + 10);
 				
 			}
 			
 		});
-		viewObjects.add(doge);
+		clickables.add(pika);
+		
+		for(int i=0; i<viewObjects.size();i++){
+			if(viewObjects.get(i) instanceof Clickable)
+				clickables.add((Clickable)viewObjects.get(i));
+		}
 		
 	}
 	
