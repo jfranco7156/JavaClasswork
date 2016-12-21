@@ -19,7 +19,8 @@ public class CoordinateScreen extends Screen implements MouseMotionListener, Mou
 	private TextLabel label;
 	private TextArea paragraph;
 	private Button button;
-	private Graphic picture;
+	//private Graphic picture;
+	private Graphic picture2;
 	
 	public CoordinateScreen(int width, int height) {
 		super(width, height);
@@ -37,11 +38,13 @@ public class CoordinateScreen extends Screen implements MouseMotionListener, Mou
 				MouseFollower.game.setScreen(MouseFollower.moveScreen);
 			}
 		});
-		picture = new Graphic(50,50,.35,"resources/sampleImages/pikachuFam.jpg");
-		viewObjects.add(picture);
+		//picture = new Graphic(50,50,.15,"resources/sampleImages/pikachuFam.jpg");
+		picture2 = new Graphic(50,50,.15,"resources/sampleImages/cutePika.png");
+		//viewObjects.add(picture);
 		viewObjects.add(label);
 		viewObjects.add(paragraph);
 		viewObjects.add(button);
+		viewObjects.add(picture2);
 		
 		
 	}

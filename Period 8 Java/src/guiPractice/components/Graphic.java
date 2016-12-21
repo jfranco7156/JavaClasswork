@@ -92,6 +92,15 @@ public class Graphic implements Visible {
 		return image;
 	}
 
+	public void setX(int x){
+		this.x= x;
+	}
+	
+	public void setY(int y){
+		this.y = y;
+	}
+	
+	
 	@Override
 	public int getX() {
 		return x;

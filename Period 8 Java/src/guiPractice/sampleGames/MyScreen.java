@@ -9,13 +9,15 @@ import java.util.ArrayList;
 import guiPractice.Screen;
 import guiPractice.components.Action;
 import guiPractice.components.Button;
+import guiPractice.components.ClickableGraphic;
 import guiPractice.components.Graphic;
 import guiPractice.components.Visible;
 
 public class MyScreen extends Screen implements MouseMotionListener, MouseListener {
 
-	private Graphic pika;
+	//private Graphic pikaF;
 	private Button back;
+	private ClickableGraphic pika;
 	
 	public MyScreen(int width, int height) {
 		super(width, height);
@@ -24,13 +26,18 @@ public class MyScreen extends Screen implements MouseMotionListener, MouseListen
 
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
-		pika = new Graphic(50,50,.35,"resources/sampleImages/pikachuFam.jpg");
+		//pikaF = new Graphic(50,50,.35,"resources/sampleImages/pikachuFam.jpg");
+		pika = new ClickableGraphic(50,50,.35,"resources/sampleImages/cutePika.png");
+		pika.setAction(new Action(){
+			public void act(){
+				pika.setX(pika.getX()+10);
+			}
+		});
 		back = new Button(50,50,100,60,"Back",Color.GRAY,new Action(){
 			public void act(){
 				MouseFollower.game.setScreen(MouseFollower.coordScreen);
 			}
 		});
-		
 		viewObjects.add(pika);
 		viewObjects.add(back);
 		
@@ -40,6 +47,9 @@ public class MyScreen extends Screen implements MouseMotionListener, MouseListen
 	public void mouseClicked(MouseEvent e) {
 		if(back.isHovered(e.getX(), e.getY())){
 			back.act();
+		}
+		else if(pika.isHovered(e.getX(), e.getY())){
+			pika.act();
 		}
 	}
 	
