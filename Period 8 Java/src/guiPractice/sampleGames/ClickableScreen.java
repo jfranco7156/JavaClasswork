@@ -21,7 +21,7 @@ public abstract class ClickableScreen extends Screen implements MouseListener {
 		
 	}
 
-	abstract void initAllObjects(ArrayList<Visible> viewObjects);
+	public abstract void initAllObjects(ArrayList<Visible> viewObjects);
 	
 	public void addObject(Visible v){
 		 super.addObject(v);

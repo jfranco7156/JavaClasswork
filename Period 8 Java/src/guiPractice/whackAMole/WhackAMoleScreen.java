@@ -13,7 +13,7 @@ public class WhackAMoleScreen extends ClickableScreen {
 	}
 
 	@Override
-	void initAllObjects(ArrayList<Visible> viewObjects) {
+	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		// TODO Auto-generated method stub
 
 	}
