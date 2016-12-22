@@ -143,6 +143,10 @@ public abstract class Screen {
 		return null;
 	}
 
+	void initAllObjects(ArrayList<Visible> viewObjects) {
+		
+	}
+
 }
 
 

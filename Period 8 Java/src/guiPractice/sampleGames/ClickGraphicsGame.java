@@ -13,8 +13,7 @@ public class ClickGraphicsGame extends GUIApplication {
 
 	@Override
 	protected void initScreen() {
-		screen = new ClickableScreen(getWidth(),
-				getHeight());
+		//screen = new ClickableScreen(getWidth(),getHeight());
 		setScreen(screen);
 	}
 
