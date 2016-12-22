@@ -111,6 +111,10 @@ public abstract class Screen {
 		
 	}
 	
+	public void addObject(Visible v) {
+		viewObjects.add(v);
+	}
+	
 	public void moveToFront(Visible v){
 		if(viewObjects.contains(v)){
 			viewObjects.remove(v);
@@ -138,10 +142,6 @@ public abstract class Screen {
 	public MouseMotionListener getMouseMotionListener() {
 		return null;
 	}
-
-
-
-
 
 }
 
