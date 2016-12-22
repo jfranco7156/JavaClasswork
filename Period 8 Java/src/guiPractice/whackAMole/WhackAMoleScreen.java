@@ -15,13 +15,15 @@ public class WhackAMoleScreen extends ClickableScreen {
 
 	public WhackAMoleScreen(int width, int height) {
 		super(width, height);
-		// TODO Auto-generated constructor stub
+		timeLeft = 60.0;
 	}
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
-		// TODO Auto-generated method stub
-
+		//moles = ArrayList<MoleInterface>
+		player = getAPlayer();
+		label = "Ready...";
+		timeLabel = ""+timeLeft;
 	}
 	
 	private PlayerInterface getAPlayer(){
