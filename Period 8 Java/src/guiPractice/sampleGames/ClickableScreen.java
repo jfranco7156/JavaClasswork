@@ -48,24 +48,13 @@ public abstract class ClickableScreen extends Screen implements MouseListener {
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
 		initAllObjects(viewObjects);
-		pika = new ClickableGraphic(50,50,1.3,"resources/sampleImages/cutePika.png");
-		pika.setAction(new Action(){
-
-			@Override
-			public void act() {
-				pika.setX(pika.getX() + 10);
-				pika.setY(pika.getY() + 10);
-				
+		clickables = new ArrayList<Clickable>();
+		for(Visible object: viewObjects){
+			if(object instanceof Clickable){
+				clickables.add((Clickable)object);
 			}
-			
-		});
-		clickables.add(pika);
-		
-		for(int i=0; i<viewObjects.size();i++){
-			if(viewObjects.get(i) instanceof Clickable)
-				clickables.add((Clickable)viewObjects.get(i));
 		}
-		
+
 	}
 	
 	@Override
