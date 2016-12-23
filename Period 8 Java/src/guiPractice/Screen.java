@@ -142,6 +142,14 @@ public abstract class Screen {
 	public MouseMotionListener getMouseMotionListener() {
 		return null;
 	}
+	
+	public int getWidth(){
+		return width;
+	}
+	
+	public int getHeight(){
+		return height;
+	}
 
 }
 
