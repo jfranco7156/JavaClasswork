@@ -37,7 +37,8 @@ public abstract class ClickableScreen extends Screen implements MouseListener {
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		for(Clickable c: clickables){
+		for(int i=0; i<clickables.size();i++){
+			Clickable c= clickables.get(i);
 			if(c.isHovered(e.getX(), e.getY())){
 				c.act();
 				break;
