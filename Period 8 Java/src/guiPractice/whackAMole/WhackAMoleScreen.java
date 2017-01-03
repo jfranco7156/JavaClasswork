@@ -93,7 +93,7 @@ public class WhackAMoleScreen extends ClickableScreen implements Runnable {
 		//each mole has a "clock"
 		//when the clock counts down to zero,
 		//it disappears
-		for(int i=0; i>moles.size(); i++){
+		for(int i=0; i<moles.size(); i++){
 			MoleInterface m = moles.get(i);
 			m.setAppearanceTime(m.getAppearanceTime()-100);
 			if(m.getAppearanceTime()<=0){

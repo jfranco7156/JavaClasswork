@@ -11,7 +11,7 @@ public class Mole extends ClickableGraphic implements MoleInterface {
 	}
 
 	public Mole(int x, int y) {
-		super(x, y, .50, "resources/sampleImages/mole.png");
+		super(x, y, .25, "resources/sampleImages/mole.png");
 	}
 
 	public Mole(int x, int y, int w, int h, String imageLocation) {
