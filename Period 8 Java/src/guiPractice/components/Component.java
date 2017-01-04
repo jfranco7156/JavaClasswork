@@ -39,6 +39,14 @@ public abstract class Component implements Visible {
 		return image;
 	}
 	
+	public void setX(int x){
+		this.x = x;
+	}
+	
+	public void setY(int y){
+		this.y = y;
+	}
+	
 	public int getX() {
 		// TODO Auto-generated method stub
 		return x;
