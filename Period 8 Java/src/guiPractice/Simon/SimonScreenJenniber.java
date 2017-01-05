@@ -93,6 +93,7 @@ public class SimonScreenJenniber extends ClickableScreen implements Runnable {
 							}
 							
 						});
+						blink.start();
 					}
 				}
 				
