@@ -29,8 +29,8 @@ public class SimonScreenJenniber extends ClickableScreen implements Runnable {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-
+		label.setText("");
+		nextRound();
 	}
 
 	@Override
@@ -98,6 +98,17 @@ public class SimonScreenJenniber extends ClickableScreen implements Runnable {
 				}
 				
 			});
+			if(b==sequence.get(sequenceIndex).getButton()){
+				sequenceIndex++;
+			}
+			else{
+				ProgressInterfaceJenniber.gameOver();
+			}
+			if(sequenceIndex==sequence.size){
+				Thread nextRound = new Thread(SimonScreen.this);
+				nextRound.start();
+			}
+			viewObjects.add(b);
 		}
 		
 	}
