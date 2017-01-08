@@ -5,15 +5,12 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import guiPractice.Screen;
-import guiPractice.components.Action;
 import guiPractice.components.Clickable;
 import guiPractice.components.ClickableGraphic;
-import guiPractice.components.Graphic;
 import guiPractice.components.Visible;
 
 public abstract class ClickableScreen extends Screen implements MouseListener {
 
-	private ClickableGraphic pika;
 	protected ArrayList<Clickable> clickables;
 	
 	public ClickableScreen(int width, int height) {
