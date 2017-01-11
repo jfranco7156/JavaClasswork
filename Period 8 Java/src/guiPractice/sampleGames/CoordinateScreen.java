@@ -64,10 +64,10 @@ public class CoordinateScreen extends Screen implements MouseMotionListener, Mou
 	}
 
 	private void addAnimation(ArrayList<Visible> viewObjects) {
-		AnimatedComponent a = new AnimatedComponent(40,50,150,150);
+		AnimatedComponent a = new AnimatedComponent(40,50,200,200);
 		try{
-			int numberInRow = 7;
-			int rows = 3;
+			int numberInRow = 5;
+			int rows = 2;
 			int w = 180;
 			int h = 180;
 			ImageIcon icon = new ImageIcon("resources/sampleImages/sprite.png");
