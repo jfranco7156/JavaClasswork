@@ -5,24 +5,11 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import guiPractice.Screen;
-<<<<<<< HEAD
-import guiPractice.components.Action;
 import guiPractice.components.Clickable;
-import guiPractice.components.ClickableGraphic;
-import guiPractice.components.Graphic;
 import guiPractice.components.Visible;
 
 public abstract class ClickableScreen extends Screen implements MouseListener {
 
-	private ClickableGraphic pika;
-=======
-import guiPractice.components.Clickable;
-import guiPractice.components.ClickableGraphic;
-import guiPractice.components.Visible;
-
-public abstract class ClickableScreen extends Screen implements MouseListener {
-
->>>>>>> branch 'master' of https://github.com/jfranco7156/JavaClasswork.git
 	protected ArrayList<Clickable> clickables;
 	
 	public ClickableScreen(int width, int height) {
