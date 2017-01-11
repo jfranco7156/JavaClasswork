@@ -22,28 +22,35 @@ public class AnimatedComponent extends MovingComponent{
 		repeat = true;
 	}
 
+	public boolean isRepeat(){
+		return repeat;
+	}
+	
 	public void setRepeat(boolean b){
 		repeat = b;
 	}
 
-	public boolean isAnimated(){
-		return true;
-	}
-	
-
-
 	public void addFrame(BufferedImage image, Integer time){
 		frame.add(image);
-		this.times.add(time);
+		times.add(time);
 	}
-
-
-
+	
+	@Override
+	public void checkBehaviors() {
+		//this would be where you add restrictions to the component's location
+	}
+	
 	public void drawImage(Graphics2D g) {
 		long currentTime = System.currentTimeMillis();//gets time now
-		//check if it's time to change the frame
-		//and make sure that there are images in the frame list
-		if(frame != null && frame.size() > 0 && frame.size() == times.size() && currentTime - displayTime > times.get(currentFrame)){
+		/**check if it's time to change the frame 
+		 * AND there should be the same number of frames as times
+		 * AND check that there are images to be drawn(that they are in the frame list)
+		 * 
+		 * 
+		 */
+		if(frame != null && frame.size() > 0 && frame.size() == times.size() && 
+				currentTime - displayTime > times.get(currentFrame)){
+			//update is occurring so update the display time
 			displayTime = currentTime;
 
 			//increase the currentFrameIndex but don't exceed size()
@@ -56,7 +63,8 @@ public class AnimatedComponent extends MovingComponent{
 			//clear the previous image
 			g = clear();
 			BufferedImage newFrame = frame.get(currentFrame);
-			g.drawImage(newFrame, 0,0,getWidth(),getHeight(),0,0,newFrame.getWidth(),newFrame.getHeight(),null);
+			g.drawImage(newFrame, 0,0,getWidth(),getHeight(),0,0,newFrame.getWidth(),
+					newFrame.getHeight(),null);
 		}
 	}
 
