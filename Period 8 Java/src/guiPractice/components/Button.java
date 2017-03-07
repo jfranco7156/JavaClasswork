@@ -62,4 +62,7 @@ public class Button extends TextLabel implements Clickable{
 		action.act();
 	}
 	
+	public void setAction(Action action){
+		this.action = action;
+	}
 }
