@@ -1,10 +1,13 @@
 Jenniber Franco
 
 5/4/2017
-Goal for Today: Today I will begin to research the skill I have chosen to implement into
+Today I will begin to research the skill I have chosen to implement into
 	my program, DragonLand. Due to unforeseen of another group spying, we have talked as a 
 	group and made a plan that we would contribute to pay for a private repository. In addition,
 	Kat and I have researched for png files that we would use to create a new page for 
 	incubation.
 
 5/5/2017
+Today I will begin to create a screen for the egg incubator. In addition, I will make an Egg
+	class that extends the GraphicComponent class. Furthermore, I will create an outline of the
+	methods that will need to be created in the egg.
