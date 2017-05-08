@@ -14,3 +14,12 @@ Today I will begin to create a screen for the egg incubator. In addition, I will
 	making a structure of the Egg class and Incubator screen class. When I am finished working
 	on it on Monday, I hope to discuss with Katya how we will each be putting our part for the 
 	symposium.
+	
+5/8/2017
+Today I will be continuing my work of programming part of the Egg class to later exchange 
+	with Kat. I will also continue working on parts of the Incubator to work out some 
+	logistics to encounter less problems in the future. Today, I have accomplished my goal of 
+	removing the 'extends MovableComponent' on the Egg class because Tamanna had previously 
+	changed MovableComponent to specifically work with her Star class. Thus, Violetta has tasked
+	herself with creating a new general class to let the rest of group use MovableComponent.
+	I have also programmed some methods on the IncubatorScreen.
