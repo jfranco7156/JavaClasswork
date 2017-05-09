@@ -23,3 +23,11 @@ Today I will be continuing my work of programming part of the Egg class to later
 	changed MovableComponent to specifically work with her Star class. Thus, Violetta has tasked
 	herself with creating a new general class to let the rest of group use MovableComponent.
 	I have also programmed some methods on the IncubatorScreen.
+	
+5/9/2017
+Today I have researched different methods to read and write onto files. In the beginning I was
+	reading a certain article that involved fileReader and Writer. However, I have found a 
+	different method known as object serialization  that I felt would work better. At the
+	moment I am currently unsure which method to use because I am still unfamiliar with both
+	methods, more extensive research will be needed and I am hoping to find a method where I am
+	able to save objects onto the file.
