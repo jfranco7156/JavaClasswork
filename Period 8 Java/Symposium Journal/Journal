@@ -31,3 +31,11 @@ Today I have researched different methods to read and write onto files. In the b
 	moment I am currently unsure which method to use because I am still unfamiliar with both
 	methods, more extensive research will be needed and I am hoping to find a method where I am
 	able to save objects onto the file.
+	
+5/11/2017
+I spent the first half of the period discussing the research I had done when she was not present on
+	5/9/2017. In addition, I partially worked with her to find out how to make the berry drag across
+	the screen to feed the dragon. The other half of the period I spent deciding whether I would
+	work with binary serialization or using FileWriter/Reader. I am hoping to create classes to use
+	FileWriter/Reader to make it easier for me to interpret and for presentation reasons.
+	
