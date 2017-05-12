@@ -39,3 +39,9 @@ I spent the first half of the period discussing the research I had done when she
 	work with binary serialization or using FileWriter/Reader. I am hoping to create classes to use
 	FileWriter/Reader to make it easier for me to interpret and for presentation reasons.
 	
+5/12/2017
+I spent the period working on writing a class where it takes a parameter, being the path of the file,
+	and reads the file. I currently have methods to read the file and am also creating a method to
+	find the number lines that are in the file. This will help because the file may vary in size and
+	we will not have problem occurring when the file changes in number of lines they have.
+	
