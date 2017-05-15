@@ -45,3 +45,17 @@ I spent the period working on writing a class where it takes a parameter, being 
 	find the number lines that are in the file. This will help because the file may vary in size and
 	we will not have problem occurring when the file changes in number of lines they have.
 	
+5/15/2017
+I spent the period finishing the code to read a file. To make sure I understood, I read the code I
+	had written over again and then began going over the code to write files. However, I was
+	introduced to using JFileChooser to select a file for reader because I have written a static path.
+	The static path will present problems in the future unless the file is part of the package of Dragon
+	Land.
+	
+	
+	
+	
+	
+	
+	
+	
