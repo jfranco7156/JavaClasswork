@@ -53,7 +53,11 @@ I spent the period finishing the code to read a file. To make sure I understood,
 	Land.
 	
 	
-	
+5/16/2017
+I watched a video on how to use JFileChooser with my class. I have found out that to display a pop-up to
+	choose a file, I would need a JButton, regardless of it being to be clicked. I am still currently in
+	the process of watching the video, thus, I only have slight grasp of how JFileChooser works. I hope
+	to finish the video later and get more information before programming it in my classes.
 	
 	
 	
