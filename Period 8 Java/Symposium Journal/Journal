@@ -59,7 +59,13 @@ I watched a video on how to use JFileChooser with my class. I have found out tha
 	the process of watching the video, thus, I only have slight grasp of how JFileChooser works. I hope
 	to finish the video later and get more information before programming it in my classes.
 	
-	
+5/17/2017
+I worked on having JFileChooser work properly to open and to let the user select a file to open. To make
+	sure it works, I tested using System.out.println. After having JFileChooser work, I began discussing 
+	with Kat, the types of files we would have to write. It was determined that we needed files for 
+	dragons that are in the shop and dragons that are displayed in the home screen. Using that, I have
+	started to make a draft of the type of information that we will need to save to create the objects 
+	when DragonLand is opened again with the saved information.
 	
 	
 	
