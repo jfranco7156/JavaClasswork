@@ -67,5 +67,9 @@ I worked on having JFileChooser work properly to open and to let the user select
 	started to make a draft of the type of information that we will need to save to create the objects 
 	when DragonLand is opened again with the saved information.
 	
-	
+5/22/2017
+I investigated on how to use JFileChooser to select a file to save information of the dragons. Using
+	JFileChooser, I tried to create a method in the WriteFile class to get a location to save the 
+	existing dragons, the ones currently purchased and the ones still being sold. In addition, I 
+	will expand on this to work with the incubation of the dragons.
 	
