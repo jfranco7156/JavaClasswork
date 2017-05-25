@@ -73,3 +73,19 @@ I investigated on how to use JFileChooser to select a file to save information o
 	existing dragons, the ones currently purchased and the ones still being sold. In addition, I 
 	will expand on this to work with the incubation of the dragons.
 	
+5/23/2017
+I discussed with Kat and Violetta the dragon list that will need to be saved when exiting Dragon Land.
+	Using this information, I discovered that Violetta had made a new list and I would need to be able
+	to use the saveDragons class to save both Kat dragons list, dragons that are currently in the 
+	homeScreen, and Violetta's list, dragon in the shop, to be able to start the game where you left 
+	off.
+
+5/24/2017
+I worked on creating the class to save the dragon arrays. Using this, I will create a string to later 
+	use in writeFile and to save the text file. While doing this, I encountered a problem with write 
+	file in choosing a directory a creating a file with the extension of '.txt'. After working on 
+	saveDragons, I will research for a method that will allow me to create a file with the extension
+	of 'txt' using JFileChooser.
+
+
+	
