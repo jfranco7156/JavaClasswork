@@ -86,6 +86,18 @@ I worked on creating the class to save the dragon arrays. Using this, I will cre
 	file in choosing a directory a creating a file with the extension of '.txt'. After working on 
 	saveDragons, I will research for a method that will allow me to create a file with the extension
 	of 'txt' using JFileChooser.
+	
+5/30/2017
+I researched different methods to use JFileChooser to create a file with a certain file type. I am
+	specifically looking into creating txt files. After that, I believe navigating the FileWriter will
+	be much easier as I have already created a method that writes the information of the dragons using
+	the ArrayList that are currently being edited by Violetta and Katya.
+
+
+
+
+
+
 
 
 	
