@@ -92,12 +92,17 @@ I researched different methods to use JFileChooser to create a file with a certa
 	specifically looking into creating txt files. After that, I believe navigating the FileWriter will
 	be much easier as I have already created a method that writes the information of the dragons using
 	the ArrayList that are currently being edited by Violetta and Katya.
-
-
-
-
-
-
-
-
 	
+5/31/2017
+I worked on creating a method to select a file destination, which will need to be tested if there are
+	any errors. However, it will need to be merged because I wrote the method for a new array in a
+	different branch. Currently, because of bugs in that branch we have not merged and I began to create
+	a mock display for the high score screen on Google Slides. The mock is still a WIP, once done, I will
+	edit the high score screen to look like the mock on Google Slides.
+
+
+
+
+
+
+
