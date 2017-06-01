@@ -100,7 +100,13 @@ I worked on creating a method to select a file destination, which will need to b
 	a mock display for the high score screen on Google Slides. The mock is still a WIP, once done, I will
 	edit the high score screen to look like the mock on Google Slides.
 
-
+6/1/2017
+I finalized the mock layout and talked over with Violetta regarding the layout using the different mocks
+	of the high score screen that I had created. Using this we talked over the possibility of changing
+	the high score screen to fit with the new color scheme we have created for DragonLand to be presented
+	in the symposium. In addition, I created a new highScore screen to avoid merging conflicts with the
+	other existent high score screen. I will edit the new high score screen class to edit the display and
+	make the new high score screen fit with our new color scheme.
 
 
 
