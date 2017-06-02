@@ -108,6 +108,12 @@ I finalized the mock layout and talked over with Violetta regarding the layout u
 	other existent high score screen. I will edit the new high score screen class to edit the display and
 	make the new high score screen fit with our new color scheme.
 
+6/2/2017
+I continued working on the high score screen. I found it difficult to determine how the code worked because
+	I was not the person who wrote the code. Using this, I determined that I would create my own class of
+	high score screen because there was also some errors that occurred in the previous high score screen and
+	there are multiple changes that need to be need to make the high score screen fit our theme.
+
 
 
 
