@@ -114,7 +114,9 @@ I continued working on the high score screen. I found it difficult to determine 
 	high score screen because there was also some errors that occurred in the previous high score screen and
 	there are multiple changes that need to be need to make the high score screen fit our theme.
 
-
-
+6/5/2017
+I worked on the newly created highScore class and have encountered problems with the updateOnEnter method. I
+	am currently investigating the reason for this problem and have not figured it out. I will continue this
+	research at home and ask my group for assistance, if needed.
 
 
