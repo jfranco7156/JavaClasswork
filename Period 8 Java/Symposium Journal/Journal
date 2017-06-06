@@ -119,4 +119,10 @@ I worked on the newly created highScore class and have encountered problems with
 	am currently investigating the reason for this problem and have not figured it out. I will continue this
 	research at home and ask my group for assistance, if needed.
 
+6/6/2017
+I merged demo2.0 to my readAndWrite branch after most of the errors had been resolved in demo2.0 branch. 
+	After completing this, I have concluded that I need to edit the DragonLand class to create the dragons 
+	when the file is being read. I will work on completing this method to create dragons using ReadFile. After
+	completing this I will continue to test the write file when the user exits out of the program.
+
 
