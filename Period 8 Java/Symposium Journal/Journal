@@ -125,4 +125,16 @@ I merged demo2.0 to my readAndWrite branch after most of the errors had been res
 	when the file is being read. I will work on completing this method to create dragons using ReadFile. After
 	completing this I will continue to test the write file when the user exits out of the program.
 
+6/7/2017
+I worked on creating a method to read a file to create new dragons when the file is selected by the user using
+	JFileChooser. Using this, I have discussed with Kat to save only one arrayList and to cross reference it
+	with the general arrayList containing the information of all the dragons. Using this I will create the
+	other arrayList of dragonsToBuy.
+	
+
+
+
+
+
+
 
